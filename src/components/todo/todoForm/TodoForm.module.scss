@@ -1,0 +1,29 @@
+.todoForm {
+    width: 100%;
+    margin-left: 17%;
+    .todoinput {
+        outline: none;
+        background: none;
+        border: 1px solid #8758ff;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        width: 72.5%;
+        color: #fff;
+      }
+      
+      .todoinput::placeholder {
+        color: #ffffff4d;
+      }
+      
+      .todobtn {
+        background: #8758ff;
+        color: #fff;
+        border: none;
+        
+        padding: 0.55rem;
+        cursor: pointer;
+        
+  }
+}
+ 

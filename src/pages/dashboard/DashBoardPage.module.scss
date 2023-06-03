@@ -1,0 +1,22 @@
+.dashboardPageWrapper{
+    .todoComponentWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    
+        overflow-y: scroll;
+        
+    }
+    .noteDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        margin-top: 10%;
+    }
+    .fixHeader{
+        position: sticky;
+        top: 0;
+    }
+}

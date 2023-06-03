@@ -1,0 +1,46 @@
+.todoWrapper{
+    background: #303076;
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    .paraHead{
+        color: #FFFFFF;
+        font-size: 20px;
+    }
+    .form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .popUpOuterDiv{
+        width: 70%;
+        background-color:#06a7fe ;
+        padding: 1%;
+        .close{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 4%;
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p{
+           
+            color: #FFFFFF;
+            font-size: 20px; 
+        }
+        .formContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 3%;
+        }
+    }
+}

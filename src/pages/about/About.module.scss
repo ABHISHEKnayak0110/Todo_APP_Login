@@ -1,0 +1,27 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonGoBack {
+    border: none;
+    padding: 3px 5px;
+    color: #FFFFFF;
+    background-color: #0174ff;
+    cursor: pointer;
+}
+.buttonDiv{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4%;
+    padding-top: 2%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   strong{
+       padding: 0.5%;
+   }
+}
