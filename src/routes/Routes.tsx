@@ -19,7 +19,7 @@ function Routers() {
     if(!authData?.user){
      return(
          <Routes>
-         <Route path="/logIn" element={<LogIn/>}/>
+         <Route  path="/logIn" element={<LogIn/>}/>
          <Route path="*" element={<Navigate to="/logIn" />}></Route>
         </Routes>
      )      

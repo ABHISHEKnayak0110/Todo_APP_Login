@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
+import { DummyUser } from '../../helpers/dummyUser';
 import style from "./LogIn.module.scss"
 
 
@@ -17,9 +18,16 @@ function LogIn() {
 
   const navigation = useNavigate();
   const handleLogin = () => {
-  
+        
+      const user = DummyUser?.find((user :any) => user.username === username && user.password === password);
+        console.log("hey" , user , authData?.user )
+      if(user){
       authData?.login(username, password);
       navigation("/dashboard")
+      setNameError("")
+      } else{
+        setError("Invalid Username or Invalid Password !!")
+      }
   };
   const handleChangeName =(e :any) => {
     setUsername(e?.target?.value)
@@ -36,6 +44,7 @@ function LogIn() {
       setNameError("Please Enter Valid User Name")
       setIsValidUserName(false)
     }
+    setError("")
   }
   const handleChangePassword =(e :any) => {
     setPassword(e?.target?.value)
@@ -45,6 +54,7 @@ function LogIn() {
     else{
       setIsValidPassword(false)
     }
+    setError("")
   }
   console.log("y" , username , password , isValidPassword , isValidUserName)
   return (
@@ -80,7 +90,7 @@ function LogIn() {
          </div>
         </div>
         <button  className={isValidPassword &&isValidUserName ?style.logInButton : style.logInDisableButton} onClick={handleLogin}>Login</button>
-        {error && <p>{error}</p>}
+        {<p className={style.errorDiv}>{error}</p>}
       </div>
    
   )
