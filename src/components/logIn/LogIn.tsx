@@ -18,13 +18,8 @@ function LogIn() {
   const navigation = useNavigate();
   const handleLogin = () => {
   
-    // const user = users.find((user) => user.username === username && user.password === password);
-    // if (user) {
       authData?.login(username, password);
       navigation("/dashboard")
-    // } else {
-    //   setError('Invalid username or password');
-    // }
   };
   const handleChangeName =(e :any) => {
     setUsername(e?.target?.value)
@@ -84,7 +79,7 @@ function LogIn() {
          }
          </div>
         </div>
-        <button className={style.logInButton} onClick={handleLogin}>Login</button>
+        <button  className={isValidPassword &&isValidUserName ?style.logInButton : style.logInDisableButton} onClick={handleLogin}>Login</button>
         {error && <p>{error}</p>}
       </div>
    
